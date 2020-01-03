@@ -2,8 +2,7 @@
 ## 一 涉及设备
 华为接入用交换机2700一台、Unifi交换机一台、Unifi AP若干、UniFi Network Controller。
 ## 二 华为交换机配置
-####个别交换机需要设置为固定VLAN加管理vlan模式，此时交换机配置了指定VLAN ID，就一定要使用tag
-####mac绑定的VLAN，只能使用untagged，否则不通
+#### 下级交换机有需要配置固定VLAN ID时，此ID得在华为交换机上配置为tag模式，否则一律使用untagged。
 ```
 vlan batch 2 to 11 31 to 59 64 to 71
 vlan 59
